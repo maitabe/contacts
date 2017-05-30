@@ -82,31 +82,55 @@ app.get('/contacts', function(req, res, next) {
 	console.log('/contacts');
 	res.json(contacts);
 
-})
+});
 
 //add new data
 app.post('/addContact', function(req, res, next) {
 	console.log('/addContact');
 	console.log(req.body);
 	var addContact = req.body;
-	var idContact = contacts.length + 1;
-	contacts.push(addContact)
+	addContact.id = contacts.length + 1;
+	contacts.push(addContact);
 
 	res.json(contacts);
 	console.log(contacts);
-})
+});
 
 // update a pre-existing item.
 app.put('/address', function(req, res, next) {
 
-})
+});
 
 //delete something
-app.delete('/address', function(req, res, next) {
+app.post('/remove', function(req, res, next) {
+	console.log('/remove');
+	console.log(req.body.id);
+	var removeItem =  req.body.id;
 
-})
+	//find item to remove
+	var toremove;
+	for (var i = 0; i < contacts.length; i++) {
+		if(removeItem === contacts[i].id) {
+			toremove = i;
+		}
+	}
+	contacts.splice(toremove, 1);
+	res.json(contacts);
+
+});
 var port = process.env.PORT || '8000';
 
 app.listen(port, function() {
 	console.log('server is up and running on ' + port);
 });
+
+
+
+
+
+
+
+
+
+
+

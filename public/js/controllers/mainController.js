@@ -1,17 +1,29 @@
-app.controller('mainCtrl', ['$scope', 'contactService', function($scope, contactService) {
+app.controller('mainCtrl', ['$scope', 'contactService','$rootScope', function($scope, contactService, $rootScope) {
 
-	contactService.getAll().then(function(data) {
 
-		$scope.contacts = data.data;
-	})
+$scope.contacts = [];
+
+	contactService.getAll().then(function() {
+		$scope.contacts = contactService.contacts;
+	});
+
+
 
 	$scope.addContact = function() {
+		contactService.addContact($scope.contact);
 
-		contactService.addContact($scope.contact)
+		$scope.contact = {};
+	};
 
-		$scope.contact = '';
-	}
+	$scope.remove = function(id) {
+		contactService.remove(id);
+	};
 
 
 
 }]);
+
+
+
+
+

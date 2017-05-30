@@ -11,14 +11,33 @@ app.factory('contactService', ['$http', function($http) {
 
 	//get data from server
 	contactsList.getAll = function(){
-		return $http.get('/contacts')
-	}
+		return $http.get('/contacts').then(function(data) {
+			angular.copy(data.data, contactsList.contacts);
+		}, function(data) {
+			//error
+			console.log('error: ' + data);
+		});
+	};
 
 	contactsList.addContact = function(newContact) {
 		return $http.post('/addContact', newContact ).then(function(data) {
-			contactsList.contacts.push(data.data);
+			console.log(data.data);
+			angular.copy(data.data, contactsList.contacts);
 		})
-	}
+		.catch(function(error) {
+			console.log(error.message);
+		});
+	};
+
+	contactsList.remove = function(contactId) {
+		console.log(contactId);
+		return $http.post('/remove', {"id": contactId}).then(function(data) {
+			angular.copy(data.data, contactsList.contacts);
+		})
+		.catch(function(error) {
+			console.err(error);
+		});
+	};
 
 	// $http.get(dfkjdfkjdf).then(function(data){
 	// 	console.log(data)
@@ -31,3 +50,11 @@ app.factory('contactService', ['$http', function($http) {
 	return contactsList;
 
 }]);
+
+
+
+
+
+// promise represents an operation that hasn't completed yet,
+//but is expected in the future. When the promise is
+//"fulfilled", that code will run.
