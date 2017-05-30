@@ -1,0 +1,27 @@
+<div>
+
+	<div class="row">
+		<div class="col-lg-6">
+			<button type="button" class="btn  ng-class:{'btn-success':!showme, 'btn-info':showme}	" ng-click="showme = !showme">{{showme ? 'Hide form' :  'Add Contact'}}</button>
+		</div>
+		<div class="col-lg-6">
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="Search for..." ng-model="someRandomText">
+		    </div><!-- /input-group -->
+		  </div><!-- /.col-lg-6 -->
+	</div>
+
+	<div class="form-container form-custom">
+	    <form ng-show="showme">
+	        <h3>Add a new contact</h3>
+	        <div class="form-group">
+	            <input type="text" class="form-control" placeholder="Product Name" ng-model="contact.name"></input>
+	        </div>
+	        <div class="form-group">
+	            <input type="text" class="form-control" placeholder="Section" ng-model="contact.email"></input>
+	        </div>
+	        <button type="button" class="btn btn-primary" ng-click="addContact()">Add</button>
+	    </form>
+	</div>
+
+</div>
