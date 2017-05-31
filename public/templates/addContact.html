@@ -15,10 +15,16 @@
 	    <form ng-show="showme">
 	        <h3>Add a new contact</h3>
 	        <div class="form-group">
-	            <input type="text" class="form-control" placeholder="Product Name" ng-model="contact.name"></input>
+	            <input type="text" class="form-control" placeholder="Contact Name" ng-model="contact.name"></input>
 	        </div>
 	        <div class="form-group">
-	            <input type="text" class="form-control" placeholder="Section" ng-model="contact.email"></input>
+	            <input type="text" class="form-control" placeholder="email" ng-model="contact.email"></input>
+	        </div>
+	         <div class="form-group">
+	            <input type="text" class="form-control" placeholder="phone" ng-model="contact.phone"></input>
+	        </div>
+	        <div class="form-group">
+	            <input type="text" class="form-control" placeholder="website" ng-model="contact.website"></input>
 	        </div>
 	        <button type="button" class="btn btn-primary" ng-click="addContact()">Add</button>
 	    </form>
