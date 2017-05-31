@@ -1,6 +1,6 @@
 <div>
 
-
+<add-contact-dir></add-contact-dir>
 
   <div class="row">
         <div class="col-sm-3 col-md-4" ng-repeat="contact in contacts | filter:someRandomText ">
@@ -9,7 +9,7 @@
 
             <!-- <img class="image" ng-src="{{product.image}}" alt="..." > -->
             <div class="caption">
-              <h3 ui-sref="contact({id: contact.id})">{{contact.name}}</h3>
+              <h3 ui-sref="contact({id: contact.id})" ng-click="" >{{contact.name}}</h3>
               <p>{{contact.email}}</p>
             </div>
           </div>
