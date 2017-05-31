@@ -1,22 +1,18 @@
-app.controller('mainCtrl', ['$scope', 'contactService','$rootScope', function($scope, contactService, $rootScope) {
+app.controller('mainCtrl', ['$scope', 'apiService', function($scope, apiService) {
 
 
-$scope.contacts = [];
-
-	contactService.getAll().then(function() {
-		$scope.contacts = contactService.contacts;
+apiService.fetch().then(function() {
+		$scope.contacts = apiService.contacts;
 	});
 
-
-
 	$scope.addContact = function() {
-		contactService.addContact($scope.contact);
+		apiService.addContact($scope.contact);
 
 		$scope.contact = {};
 	};
 
 	$scope.remove = function(id) {
-		contactService.remove(id);
+		apiService.remove(id);
 	};
 
 

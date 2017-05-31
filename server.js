@@ -22,7 +22,7 @@ app.use('/users', users);*/
 
 
 
-//dummy data
+/*//dummy data
 var contacts = [
 	{
 		    id: 1,
@@ -118,7 +118,9 @@ app.post('/remove', function(req, res, next) {
 	contacts.splice(toremove, 1);
 	res.json(contacts);
 
-});
+});*/
+
+
 var port = process.env.PORT || '8000';
 
 app.listen(port, function() {

@@ -1,10 +1,26 @@
-// app.factory('apiService', [ '$http', function($http) {
+app.factory('apiService', [ '$http', function($http) {
+
+	var apiurl = "https://jsonplaceholder.typicode.com/users";
 
 
-// 	//get data from api
-// 	$http.get("https://jsonplaceholder.typicode.com/users").then(function(resp) {
-// 		console.log(data);
-// 		return resp.data;
-// 	})
+	var contactsList = {
+		contacts: []
+	};
 
-// }]);
+	//get data from api
+
+	contactsList.fetch = function() {
+		return $http.get(apiurl).then(function(data) {
+			console.log(data);
+			angular.copy(data.data, contactsList.contacts);
+		});
+	};
+
+	contactsList.addContact = function() {
+
+	};
+
+	return contactsList;
+
+
+}]);

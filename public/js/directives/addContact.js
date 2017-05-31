@@ -1,4 +1,4 @@
-app.directive('addContactDir', ['contactService', function(contactService) {
+app.directive('addContactDir', ['apiService', function(apiService) {
 
 	return {
 		restrict: 'AE',

@@ -1,4 +1,4 @@
-app.factory('contactService', ['$http', function($http) {
+/*app.factory('contactService', ['$http', function($http) {
 
 	var contactsList = {
 
@@ -57,4 +57,4 @@ app.factory('contactService', ['$http', function($http) {
 
 // promise represents an operation that hasn't completed yet,
 //but is expected in the future. When the promise is
-//"fulfilled", that code will run.
+//"fulfilled", that code will run.*/
