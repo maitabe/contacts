@@ -3,7 +3,7 @@ app.directive('addContactDir', ['contactService', function(contactService) {
 	return {
 		restrict: 'AE',
 		replace: true,
-		templateUrl: 'templates/addContact.html'
+		templateUrl: 'templates/addContactDirective.html'
 	};
 
 }]);

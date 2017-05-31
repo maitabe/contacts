@@ -119,6 +119,13 @@ app.post('/remove', function(req, res, next) {
 	res.json(contacts);
 
 });
+
+/*app.post('/contact/:id', function(req, res, next) {
+	console.log('/contact/:id');
+	console.log(req.params.id);
+	res.send(req.params);
+});*/
+
 var port = process.env.PORT || '8000';
 
 app.listen(port, function() {

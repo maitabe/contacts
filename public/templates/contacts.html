@@ -9,7 +9,7 @@
 
             <!-- <img class="image" ng-src="{{product.image}}" alt="..." > -->
             <div class="caption">
-              <h3>{{contact.name}}</h3>
+              <h3 ui-sref="contact({id: contact.id})">{{contact.name}}</h3>
               <p>{{contact.email}}</p>
             </div>
           </div>
@@ -21,3 +21,5 @@
 
 
 <!--   -->
+
+<p class="beer-name" ui-sref="beer({id: beer._id})">{{beer.name}}</p>

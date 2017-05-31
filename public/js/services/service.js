@@ -39,6 +39,16 @@ app.factory('contactService', ['$http', function($http) {
 		});
 	};
 
+	contactsList.findById = function(id) {
+		var contactId = parseInt(id);
+		for (var i = 0; i < contactsList.contacts.length; i++) {
+			if(contactId === contactsList.contacts[i].id) {
+				return contactsList.contacts[i];
+			}
+		}
+	};
+
+
 	// $http.get(dfkjdfkjdf).then(function(data){
 	// 	console.log(data)
 	// 	return data
