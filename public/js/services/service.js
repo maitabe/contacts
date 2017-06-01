@@ -48,6 +48,14 @@ app.factory('contactService', ['$http', function($http) {
 		}
 	};
 
+	contactsList.edit = function(id){
+		console.log(id);
+		return $http.put('/update', {id: id}).then(function(data) {
+			console.log(data);
+			angular.copy(data.data, contactsList.contacts);
+		});
+	};
+
 
 	// $http.get(dfkjdfkjdf).then(function(data){
 	// 	console.log(data)

@@ -98,7 +98,19 @@ app.post('/addContact', function(req, res, next) {
 });
 
 // update a pre-existing item.
-app.put('/address', function(req, res, next) {
+app.put('/update', function(req, res, next) {
+	console.log(req.body.id);
+	var replace;
+	for (var i = 0; i < contacts.length; i++) {
+		//find id of obj
+		if(req.body.id.id === contacts[i].id) {
+			contacts[i].name = req.body.id.name;
+			contacts[i].email = req.body.id.email;
+			replace = contacts[i];
+		}
+	}
+	console.log(contacts);
+	res.json(contacts);
 
 });
 

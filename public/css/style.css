@@ -1,0 +1,10 @@
+button.btn.btn-info.align {
+    float: right;
+}
+
+.customIn {
+    display: block;
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 16px;
+}

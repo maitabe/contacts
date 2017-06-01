@@ -1,10 +1,17 @@
 <div class="page-header">
-    <a href="/#/contacts">back</a>
+
+	<div class="row">
+		<a href="/#/contacts">back</a>
+		<button type="button" class="btn btn-info align" ng-click="edit(contact)" ng-hide="changeText">{{buttonText}}</button>
 
 
-    <h3>{{contact.name}}</h3>
-    <p>{{contact.email}}</p>
+	</div>
 
+
+    <h3 ng-hide="!editContact">{{contact.name}}</h3>
+    <input class="customIn" type="text" ng-hide="editContact" ng-model="contact.name">
+    <div ng-hide="!editContact">{{contact.email}}</div>
+    <input class="customIn" type="text" ng-hide="editContact" ng-model="contact.email">
 
 </div>
 
