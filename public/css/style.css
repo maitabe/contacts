@@ -1,3 +1,15 @@
+.header-contact {
+	margin-bottom: 50px;
+}
+
+.align-right {
+	float: right;
+}
+
+button.btn.btn-primary a {
+    color: white;
+}
+
 button.btn.btn-info.align {
     float: right;
 }
@@ -8,3 +20,17 @@ button.btn.btn-info.align {
     padding: 8px;
     font-size: 16px;
 }
+
+input.form-control.ng-pristine{
+	 background-color:#fff;
+}
+
+/*type of green*/
+input.ng-valid {
+    background-color: #21FFE8;
+  }
+
+/*type of red*/
+  input.ng-invalid {
+    background-color: #CC7E7C;
+  }
