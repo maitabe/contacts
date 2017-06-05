@@ -1,7 +1,9 @@
 <div>
 
  <div class="row">
-    <input type="text" name="write" placeholder="write some text" ng-model="$parent.text">
+    <div class="page-header">
+      <input type="text" name="write" placeholder="write text - testing ctrl's  " ng-model="$parent.text">
+    </div>
   </div>
 
 <div class="customInput">
@@ -11,14 +13,25 @@
   <div class="row">
       <!-- <div>{{messageadd}}</div> -->
         <div class="col-sm-3 col-md-4" ng-repeat="contact in contacts | filter:someRandomText ">
-        <i class="fa fa-trash-o fa-lg" aria-hidden="true" ng-click="remove(contact.id)"></i>
+        <div class="icon-right"><i class="fa fa-trash-o fa-lg" aria-hidden="true" ng-click="remove(contact.id)"></i></div>
+
           <div class="thumbnail">
 
             <!-- <img class="image" ng-src="{{product.image}}" alt="..." > -->
             <div class="caption ">
+              <div class="thumb-custom">
+              <div class="col-xs-6 col-md-3">
+                <a href="#" >
+                <i class="fa fa-user-o fa-5x" aria-hidden="true"></i>
+                  <!-- <img src="..." alt="..."> -->
+                </a>
+              </div>
+              </div>
               <h3 ui-sref="contact({id: contact.id})" ng-click="" >{{contact.name}}</h3>
               <p>{{contact.email}}</p>
             </div>
+
+
           </div>
 
 
