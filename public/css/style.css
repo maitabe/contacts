@@ -42,8 +42,9 @@ button.btn.btn-info.align {
 
 
 i.fa.fa-trash-o.fa-lg {
-    /*cursor: pointer;*/
-        /*float: right;*/
+    float: right;
+    border: 1px solid #eee;
+    padding: 5px;
 }
 
 
@@ -51,6 +52,14 @@ i.fa.fa-trash-o.fa-lg {
     display: inline-block;
     float: left;
     padding-top: 7px;
+}
+
+.thumb-custom a{
+  cursor: none;
+}
+
+.thumb-custom a:hover{
+  cursor: none;
 }
 
 .cont-style {
