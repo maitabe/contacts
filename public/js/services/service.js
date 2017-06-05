@@ -1,5 +1,6 @@
 app.factory('contactService', ['$http', function($http) {
 
+
 	var contactsList = {
 
 		contacts: []
@@ -18,6 +19,7 @@ app.factory('contactService', ['$http', function($http) {
 			console.log('error: ' + data);
 		});
 	};
+
 
 	contactsList.addContact = function(newContact) {
 		return $http.post('/addContact', newContact ).then(function(data) {

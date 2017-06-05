@@ -19,29 +19,53 @@
             <a class="navbar-brand nav-link" ui-sref="about" ui-sref-active="active">About</a>
         </li>
       </ul>
+      <span class="navbar-text customText">
+      <!--  {{messageadd}} -->
+    </span>
     </div>
   </nav>
 
-  <div class="container">
-
+<div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <h1 class="text-center">Contact List</h1>
-    </div>
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center">Contact List</h1>
+        <p>{{text}}</p>
+      </div>
   </div>
+
+
+  <!-- <div class="container" ng-controller="listContactsCtrl">
+
+ </div>  -->
+ <!-- end of container -->
 
   <ui-view></ui-view>
 
-  </div> <!-- end of container -->
+  <div ng-controller="brotherCtrl">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+          <h1 class="text-center">brother controller</h1>
+
+          <div>{{text}}</div>
+      </div>
+    </div>
+  </div>
+
+
+</div> <!-- end of container -->
 
    <script src="angular/angular.js"></script>
    <script src="@uirouter/core/_bundles/ui-router-core.js"></script>
    <script src="@uirouter/angularjs/release/ui-router-angularjs.js"></script>
   <script src="angular-ui-router/release/angular-ui-router.js"></script>
+ <!--  <script src="angular-animate/angular-animate.js"></script> -->
   <script src="js/app.js"></script>
   <script src="js/services/service.js"></script>
   <script src="js/controllers/mainController.js"></script>
+  <script src="js/controllers/listContactsController.js"></script>
   <script src="js/controllers/contactController.js"></script>
+  <script src="js/controllers/brotherController.js"></script>
   <script src="js/directives/addContact.js"></script>
 
 </body>

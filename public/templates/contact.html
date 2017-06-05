@@ -2,10 +2,6 @@
 
 	<div class="row header-contact">
 		<button type="button" class="btn btn-primary"><a href="/#/contacts">BACK</a></button>
-
-
-
-
 	</div>
 
 	<form name="contactForm" novalidate>
@@ -18,9 +14,11 @@
 	    <div ng-hide="!editContact">{{contact.email}}</div>
 	    <input type="email"  class="customIn" name="email"  type="text" ng-hide="editContact" ng-model="contact.email" required>
 	    <p class="help-block" ng-show="contactForm.email.$invalid">Valid Email Required</p>
-
 	</form>
 
+
+	<div>{{test.newVal}}</div>
+    <div>{{test.oldVal}}</div>
 
 </div>
 

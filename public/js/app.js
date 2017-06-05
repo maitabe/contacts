@@ -2,22 +2,24 @@ var app = angular.module('contactApp', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
-	// var home = {
-	// 	name: 'home',
-	// 	url: '/home',
-	// 	// templateUrl: 'templates/firstpage.html'
-	// };
+	var home = {
+		name: 'home',
+		url: '/home',
+		controller: 'mainCtrl',
+		// templateUrl: 'index.html'
+	};
+
 
 	var contacts = {
 		name: 'contacts',
 		url: '/contacts',
 		templateUrl: 'templates/contacts.html',
-		controller: 'mainCtrl',
-		resolve: {
+		controller: 'listContactsCtrl'
+		/*resolve: {
 			contacts:function(contactService){
 				return contactService.getAll();
 			}
-		}
+		}*/
 	};
 
 	var contact = {

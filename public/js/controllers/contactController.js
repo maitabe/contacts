@@ -1,9 +1,23 @@
-app.controller('contactCtrl', ['$scope', 'contactService', '$stateParams', function($scope, contactService, $stateParams) {
+app.controller('contactCtrl', ['$scope', '$rootScope', 'contactService', '$stateParams', function($scope, $rootScope, contactService, $stateParams) {
 
 
 	//find contact by id
 	console.log($stateParams.id);
 	$scope.contact = contactService.findById($stateParams.id);
+
+
+	//example of watch
+	/*$scope.$watch('contact', function(newValue, oldValue) {
+		console.log('new '+ newValue);
+		console.log('old' + oldValue);
+
+		$scope.test = {
+				newVal: 'this is the new' + newVal,
+				oldVal: 'this is the old' + oldVal
+			};
+	}, true);*/
+
+
 
 	$scope.buttonText = 'EDIT';
 	$scope.editContact = true;

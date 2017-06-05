@@ -1,30 +1,9 @@
-app.controller('mainCtrl', ['$scope', 'contactService','$rootScope', function($scope, contactService, $rootScope) {
+app.controller('mainCtrl',['$scope', '$rootScope', function ($scope, $rootScope) {
 
 
-$scope.contacts = [];
+	$scope.messageadd = '';
 
-	contactService.getAll().then(function() {
-		$scope.contacts = contactService.contacts;
-	});
-
-
-
-	$scope.addContact = function() {
-		contactService.addContact($scope.contact);
-
-		$scope.contact = {};
-	};
-
-	$scope.remove = function(id) {
-		contactService.remove(id);
-	};
-
-
+	// $scope.recieveMsg = $scope.calmMsg;
 
 
 }]);
-
-
-
-
-
