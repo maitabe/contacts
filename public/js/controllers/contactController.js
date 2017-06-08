@@ -17,25 +17,5 @@ app.controller('contactCtrl', ['$scope', '$rootScope', 'contactService', '$state
 			};
 	}, true);*/
 
-
-
-	$scope.buttonText = 'EDIT';
-	$scope.editContact = true;
-
-	$scope.edit = function(contact) {
-
-		if($scope.buttonText === 'EDIT') {
-			$scope.buttonText = 'SAVE';
-			$scope.editContact = false;
-		}else{
-			contactService.edit(contact);
-
-			$scope.buttonText = 'EDIT';
-			$scope.editContact = true;
-		}
-
-	};
-
-
 }]);
 
