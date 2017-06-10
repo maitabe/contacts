@@ -1,0 +1,24 @@
+<div>
+
+
+ <i class="fa fa-trash-o fa-lg" aria-hidden="true" ng-click="remove(contact.id)"></i>
+
+  <div class="thumbnail">
+    <!-- <img class="image" ng-src="{{product.image}}" alt="..." > -->
+    <div class="caption ">
+      <div class="thumb-custom">
+      <div class="col-xs-6 col-md-3">
+        <a href="" >
+        <i class="fa fa-user-o fa-5x" aria-hidden="true"></i>
+          <!-- <img src="..." alt="..."> -->
+        </a>
+      </div>
+      </div>
+      <h3 ui-sref="contact({id: contact.id})" ng-click="">{{contact.name}}</h3>
+      <p>{{contact.email}}</p>
+    </div>
+
+
+   </div>
+
+</div>

@@ -1,54 +1,19 @@
 <div>
 
-<div class="customInput">
-<add-contact-dir></add-contact-dir>
-</div>
+  <div class="customInput">
+    <add-contact-dir></add-contact-dir>
+  </div>
 
   <div class="row">
-      <!-- <div>{{messageadd}}</div> -->
-        <div class="col-sm-3 col-md-4" ng-repeat="contact in contacts | filter:someRandomText ">
-        <i class="fa fa-trash-o fa-lg" aria-hidden="true" ng-click="remove(contact.id)"></i>
+    <div class="page-header">
+      <h4>{{messageRemoved}}</h4>
+    </div>
+  </div>
 
-          <div class="thumbnail">
-
-            <!-- <img class="image" ng-src="{{product.image}}" alt="..." > -->
-            <div class="caption ">
-              <div class="thumb-custom">
-              <div class="col-xs-6 col-md-3">
-                <a href="" >
-                <i class="fa fa-user-o fa-5x" aria-hidden="true"></i>
-                  <!-- <img src="..." alt="..."> -->
-                </a>
-              </div>
-              </div>
-              <h3 ui-sref="contact({id: contact.id})" ng-click="" >{{contact.name}}</h3>
-              <p>{{contact.email}}</p>
-            </div>
-
-
-          </div>
-
-
-          <!-- <div>{{test.newVal}}</div>
-          <div>{{test.oldVal}}</div> -->
-
+  <div class="row">
+       <div class="col-sm-3 col-md-4" ng-repeat="contact in contacts | filter:someRandomText ">
+          <contacts-summary contact-object="contact" remove-contact="remove(contact)"></contacts-summary>
         </div>
   </div>
 
-
-   <!-- <div class="row">
-    <div class="page-top">
-    <h4>testing brother controllers</h4>
-      <input type="text" name="write" placeholder="write text - testing ctrl's  " ng-model="$parent.text">
-    </div>
-  </div> -->
-
-
-
-
-
-
 </div>
-
-
-<!--   -->

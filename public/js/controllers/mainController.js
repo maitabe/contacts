@@ -1,7 +1,7 @@
 app.controller('mainCtrl',['$scope', '$rootScope', function ($scope, $rootScope) {
 
 
-	$scope.messageadd = '';
+	$scope.messageRemoved = '';
 
 	// $scope.recieveMsg = $scope.calmMsg;
 

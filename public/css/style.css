@@ -45,6 +45,7 @@ i.fa.fa-trash-o.fa-lg {
     float: right;
     border: 1px solid #eee;
     padding: 5px;
+    cursor: pointer;
 }
 
 
@@ -80,6 +81,10 @@ i.fa.fa-trash-o.fa-lg {
 
 .box-bottom {
   height: 60px
+}
+
+.page-header h4 {
+  text-align: center;
 }
 
 /*form validation */

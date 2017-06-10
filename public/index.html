@@ -20,7 +20,7 @@
         </li>
       </ul>
       <span class="navbar-text customText">
-      <!--  {{messageadd}} -->
+       {{messageRemoved}}
     </span>
     </div>
   </nav>
@@ -32,32 +32,10 @@
       </div>
   </div>
 
-
-  <!-- <div class="container" ng-controller="listContactsCtrl">
-
- </div>  -->
- <!-- end of container -->
-
   <ui-view></ui-view>
 
-  <!-- <div ng-controller="brotherCtrl">
-    <div class="container ">
-      <div class="page-header"></div>
-      <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-          <h1 class="text-center">Notes</h1>
-          <p>this is the brother of main controller, whats written in the input above will be reflected here</p>
-          <div>{{text}}</div>
-      </div>
-    </div>
-    </div>
-  </div> -->
-
-
 </div> <!-- end of container -->
-<!-- <footer>
-  <div class="page-header"></div>
-</footer> -->
+
 
    <script src="angular/angular.js"></script>
    <script src="@uirouter/core/_bundles/ui-router-core.js"></script>
@@ -69,9 +47,9 @@
   <script src="js/controllers/mainController.js"></script>
   <script src="js/controllers/listContactsController.js"></script>
   <script src="js/controllers/contactController.js"></script>
-  <script src="js/controllers/brotherController.js"></script>
+  <!-- <script src="js/controllers/brotherController.js"></script> -->
   <script src="js/directives/addContact.js"></script>
-  <script src="js/directives/contactProfile.js"></script>
+  <script src="js/directives/contactsSummary.js"></script>
 
 </body>
 </html>
