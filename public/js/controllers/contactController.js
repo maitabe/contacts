@@ -5,6 +5,7 @@ app.controller('contactCtrl', ['$scope', '$rootScope', 'contactService', '$state
 	console.log($stateParams.id);
 	$scope.contact = contactService.findById($stateParams.id);
 
+	console.log($scope.contact);
 
 	//example of watch
 	/*$scope.$watch('contact', function(newValue, oldValue) {
@@ -16,6 +17,26 @@ app.controller('contactCtrl', ['$scope', '$rootScope', 'contactService', '$state
 				oldVal: 'this is the old' + oldVal
 			};
 	}, true);*/
+
+
+	$scope.buttonText = 'EDIT';
+	$scope.editContact = true;
+
+	console.log($scope.contact);
+	$scope.edit = function(contact) {
+
+		if($scope.buttonText === 'EDIT') {
+			$scope.buttonText = 'SAVE';
+			$scope.editContact = false;
+		}else{
+			contactService.edit(contact);
+
+			$scope.buttonText = 'EDIT';
+			$scope.editContact = true;
+		}
+
+	};
+
 
 }]);
 
