@@ -8,7 +8,7 @@ app.controller('contactCtrl', ['$scope', '$rootScope', 'contactService', '$state
 	console.log($scope.contact);
 
 	//example of watch
-	/*$scope.$watch('contact', function(newValue, oldValue) {
+	$scope.$watch('contact', function(newValue, oldValue) {
 		console.log('new '+ newValue);
 		console.log('old' + oldValue);
 
@@ -16,7 +16,7 @@ app.controller('contactCtrl', ['$scope', '$rootScope', 'contactService', '$state
 				newVal: 'this is the new' + newVal,
 				oldVal: 'this is the old' + oldVal
 			};
-	}, true);*/
+	}, true);
 
 
 	$scope.buttonText = 'EDIT';

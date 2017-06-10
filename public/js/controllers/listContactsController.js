@@ -37,11 +37,11 @@ console.log($scope.contacts);*/
 		contactService.remove(id);
 	};
 
-	/*$scope.$watch('contacts', function(newVal, oldVal) {
+	$scope.$watch('contacts', function(newVal, oldVal) {
 
 			console.log('watch newVal', newVal);
 			console.log('watch oldVal', oldVal);
-	}, true);*/
+	}, true);
 
 	//true check the value of the reference
 
